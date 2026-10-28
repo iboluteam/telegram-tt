@@ -9,10 +9,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Build frontend (uses existing dist/)
+        run: echo "Using pre-built dist/"
+
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-apple-darwin,x86_64-apple-darwin
 
-      - name: Build Tauri (uses pre-built dist/)
+      - name: Build Tauri app
         run: |
           cd tauri
           cargo build --release --target aarch64-apple-darwin

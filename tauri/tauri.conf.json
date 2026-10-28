@@ -22,7 +22,7 @@
     "active": true,
     "createUpdaterArtifacts": false,
     "category": "SocialNetworking",
-    "copyright": "jB-Telegram+",
+    "copyright": "jB-Telegram-Plus",
     "externalBin": [],
     "icon": [
       "icons/32x32.png",
@@ -31,7 +31,7 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ],
-    "longDescription": "jB-Telegram+ - Unrestricted Telegram client",
+    "longDescription": "jB-Telegram-Plus - Unrestricted Telegram client",
     "macOS": {
       "entitlements": "entitlements.mac.plist",
       "exceptionDomain": "",
@@ -40,7 +40,7 @@
       "signingIdentity": null
     },
     "resources": [],
-    "shortDescription": "jB-Telegram+",
+    "shortDescription": "jB-Telegram-Plus",
     "targets": [
       "app",
       "dmg"
@@ -53,5 +53,5 @@
     }
   },
   "identifier": "com.jbtelegram.plus",
-  "productName": "jB-Telegram+"
+  "productName": "jB-Telegram-Plus"
 }

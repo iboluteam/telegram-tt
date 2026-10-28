@@ -1,7 +1,7 @@
  [package]
 name = "jb_telegram_plus"
 version = "2.12.2"
-description = "jB-Telegram+"
+description = "jB-Telegram-Plus"
 authors = ["Alexander Zinchuk"]
 license = "GPLv3"
 repository = "https://github.com/iboluteam/help-app"

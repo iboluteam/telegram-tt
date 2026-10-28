@@ -60,5 +60,5 @@ jobs:
       - name: Upload DMG artifact
         uses: actions/upload-artifact@v4
         with:
-          name: jB-Telegram+-${{ matrix.target }}.dmg
+          name: jB-Telegram-Plus-${{ matrix.target }}.dmg
           path: tauri/target/${{ matrix.target }}/release/bundle/dmg/*.dmg

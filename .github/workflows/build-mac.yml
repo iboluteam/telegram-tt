@@ -4,39 +4,25 @@ on: [workflow_dispatch]
 
 jobs:
   build-mac:
-    strategy:
-      matrix:
-        target: [aarch64-apple-darwin]
     runs-on: macos-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
 
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
-
-      - name: Build frontend
-        run: npm run build:production
-
-      - name: Build Tauri app
+      - name: Build Tauri (uses pre-built dist/)
         run: |
           cd tauri
-          cargo build --release --target ${{ matrix.target }}
+          cargo build --release --target aarch64-apple-darwin
 
       - name: Bundle .app
         run: |
-          npx tauri build --target ${{ matrix.target }} --bundles dmg
+          npx tauri build --target aarch64-apple-darwin --bundles dmg
 
-      - name: Upload DMG artifact
+      - name: Upload DMG
         uses: actions/upload-artifact@v4
         with:
-          name: jB-Telegram-Plus-${{ matrix.target }}.dmg
-          path: tauri/target/${{ matrix.target }}/release/bundle/dmg/*.dmg
+          name: jB-Telegram-Plus-aarch64.dmg
+          path: tauri/target/aarch64-apple-darwin/release/bundle/dmg/*.dmg

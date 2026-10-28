@@ -8,7 +8,7 @@ export default function prepareTauriConfig() {
     bundle: {
       windows: {},
     },
-    identifier: 'com.helpapp.desktop',
+    identifier: 'com.jbtelegram.plus',
   };
 
   if (process.env.WITH_UPDATER === 'true') {

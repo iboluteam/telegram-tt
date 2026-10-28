@@ -1,10 +1,10 @@
  [package]
-name = "telegram_air"
+name = "help_app"
 version = "2.12.2"
-description = "Telegram Air"
+description = "Help App"
 authors = ["Alexander Zinchuk"]
 license = "GPLv3"
-repository = "https://github.com/Ajaxy/telegram-tt"
+repository = "https://github.com/iboluteam/help-app"
 edition = "2024"
 rust-version = "1.97"
 

@@ -22,7 +22,7 @@
     "active": true,
     "createUpdaterArtifacts": false,
     "category": "SocialNetworking",
-    "copyright": "Telegram Air",
+    "copyright": "Help App",
     "externalBin": [],
     "icon": [
       "icons/32x32.png",
@@ -31,7 +31,7 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ],
-    "longDescription": "",
+    "longDescription": "Help App - Unrestricted Telegram client",
     "macOS": {
       "entitlements": "entitlements.mac.plist",
       "exceptionDomain": "",
@@ -40,11 +40,10 @@
       "signingIdentity": null
     },
     "resources": [],
-    "shortDescription": "",
+    "shortDescription": "Help App",
     "targets": [
       "app",
-      "nsis",
-      "appimage"
+      "dmg"
     ],
     "windows": {
       "digestAlgorithm": "sha256",
@@ -53,6 +52,6 @@
       }
     }
   },
-  "identifier": "org.telegram.TelegramAirBeta",
-  "productName": "Telegram Air"
+  "identifier": "com.helpapp.desktop",
+  "productName": "Help App"
 }

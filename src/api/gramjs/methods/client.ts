@@ -79,6 +79,10 @@ import { ChatAbortController } from '../ChatAbortController';
 const DEFAULT_USER_AGENT = 'Unknown UserAgent';
 const DEFAULT_PLATFORM = 'Unknown platform';
 
+// HELP-APP CUSTOM: Fake as Linux PC to bypass Apple restrictions
+const CUSTOM_DEVICE_MODEL = 'Linux PC (x86_64)';
+const CUSTOM_SYSTEM_VERSION = 'Ubuntu 22.04 LTS';
+
 GramJsLogger.setLevel(DEBUG_GRAMJS ? 'debug' : 'warn');
 
 const gramJsUpdateEventBuilder = { build: (update: Update) => update };
@@ -117,8 +121,8 @@ export async function init(initialArgs: ApiInitialArgs, onConnected?: NoneToVoid
     TELEGRAM_API_ID,
     TELEGRAM_API_HASH,
     {
-      deviceModel: navigator.userAgent || userAgent || DEFAULT_USER_AGENT,
-      systemVersion: platform || DEFAULT_PLATFORM,
+      deviceModel: CUSTOM_DEVICE_MODEL,
+      systemVersion: CUSTOM_SYSTEM_VERSION,
       appVersion: `${APP_VERSION} ${APP_CODE_NAME}`,
       useWSS: true,
       additionalDcsDisabled: IS_TEST,
